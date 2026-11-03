@@ -19,7 +19,9 @@ CurlDesk is an open-source Windows desktop request client built specifically aro
 
 ## Screenshots
 
-This repository does not include demo requests or screenshots containing personal data. Run the app with your own request to see the interface.
+![CurlDesk TLS fingerprint and proxy settings](docs/images/tls-fingerprint.png)
+
+The screenshot shows the TLS fingerprint selector, the Chrome 120 default, and per-request proxy settings. The example URL and local proxy address are shown for illustration only.
 
 ## Requirements
 

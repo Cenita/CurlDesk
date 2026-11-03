@@ -72,8 +72,9 @@ class CurlImportTests(unittest.TestCase):
         )
         self.assertEqual(request.url, "https://example.test")
         self.assertEqual(request.headers, [("X-Test", "one")])
+        self.assertEqual(request.http_version, "2")
         self.assertTrue(any("connect-timeout" in item for item in warnings))
-        self.assertTrue(any("--http2" in item for item in warnings))
+        self.assertFalse(any("--http2" in item for item in warnings))
 
     def test_missing_url_and_unclosed_quote_report_errors(self):
         with self.assertRaises(CurlImportError):

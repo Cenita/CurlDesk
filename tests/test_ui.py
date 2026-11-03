@@ -68,7 +68,9 @@ class UiSmokeTests(unittest.TestCase):
                     body=b'{"ok":true}',
                 )
             )
-            self.assertIn('"ok": true', window.response_body.toPlainText())
+            self.assertEqual(window.response_body.toPlainText(), '{"ok":true}')
+            self.assertIn('"ok": true', window.formatted_body.toPlainText())
+            self.assertEqual(window.response_tabs.currentIndex(), window.formatted_tab_index)
 
             class EchoHandler(BaseHTTPRequestHandler):
                 def do_GET(self):
@@ -110,7 +112,8 @@ class UiSmokeTests(unittest.TestCase):
             if worker.isRunning():
                 worker.wait(2000)
             self.assertTrue(window.send_button.isEnabled())
-            self.assertIn('"ui": true', window.response_body.toPlainText())
+            self.assertEqual(window.response_body.toPlainText(), '{"ui":true}')
+            self.assertIn('"ui": true', window.formatted_body.toPlainText())
             self.assertEqual(len(storage.list_history()), 1)
 
     def test_tabs_keep_requests_and_async_responses_separate(self):
