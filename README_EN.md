@@ -29,6 +29,10 @@ The screenshot shows the TLS fingerprint selector, the Chrome 120 default, and p
 - Python 3.10
 - Python Launcher (`py`)
 
+## Download
+
+Open [Releases](https://github.com/Cenita/CurlDesk/releases/latest) to download the latest `CurlDesk.exe`. Each release also includes a SHA-256 checksum file.
+
 ## Run
 
 Open PowerShell in the project directory:

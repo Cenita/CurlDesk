@@ -29,6 +29,10 @@ CurlDesk 是一个面向 Windows 的开源桌面请求工具，核心目标是�
 - Python 3.10
 - Python Launcher（`py`）
 
+## 下载
+
+打开 [Releases](https://github.com/Cenita/CurlDesk/releases/latest) 下载最新的 `CurlDesk.exe`。每个版本同时提供 SHA-256 校验文件。
+
 ## 运行
 
 在 PowerShell 中从项目目录运行：
